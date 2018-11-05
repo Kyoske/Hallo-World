@@ -7,12 +7,47 @@
         xmlns:local="clr-namespace:WpfApp_GitTest"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
     <Controls:MetroWindow.Flyouts>
         <Controls:FlyoutsControl>
 
         </Controls:FlyoutsControl>
     </Controls:MetroWindow.Flyouts>
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <ToggleButton Content="常に最前面" Style="{DynamicResource MetroFlatToggleButton}">
+            </ToggleButton>
+            <Button>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="20"
+                   Height="20"
+                   Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_cupcake}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0"
+                   VerticalAlignment="Center"
+                   Text="deploy cupcakes" />
+                </StackPanel>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
     <Grid>
         <Button x:Name="testbutton" Content="Button" Margin="698,383,20.333,9.667" Style="{DynamicResource AccentedSquareButtonStyle}" Click="Button_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="618,384,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Controls:Flyout Name="Flyouttest" Header="Flyout" Position="Right" Width="423" Margin="0,0,0.333,-0.333" Theme="Dark"
+                         CloseButtonVisibility="Collapsed">
+            <!-- Your custom content here -->
+        </Controls:Flyout>
     </Grid>
+
+
 </Controls:MetroWindow>

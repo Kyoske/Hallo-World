@@ -76,5 +76,10 @@ namespace WpfApp_GitTest
                 cts.Cancel();
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Flyouttest.IsOpen = true;
+        }
     }
 }

@@ -107,6 +107,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="CollectPart.cs" />
+    <Compile Include="ViewModel.cs" />
+    <Compile Include="Views\Tab1.xaml.cs">
+      <DependentUpon>Tab1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\グループ1.xaml.cs">
+      <DependentUpon>グループ1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
@@ -129,6 +136,14 @@
     <Page Include="Resources\IconsNonShared.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Tab1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\グループ1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Window1.xaml">
       <SubType>Designer</SubType>
